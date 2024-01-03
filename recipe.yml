@@ -1,0 +1,63 @@
+name: 'Drupal Starter Base'
+description: 'A recipe for starting a Drupal 10 project.'
+type: 'Site'
+
+install:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - big_pipe
+  - block_content
+  - block
+  - breakpoint
+  - ckeditor5
+  - config
+  - contextual
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - gin
+  - gin_toolbar
+  - image
+  - link
+  - menu_link_content
+  - menu_ui
+  - mysql
+  - node
+  - olivero
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - update
+  - user
+  - views_ui
+  - views
+
+config:
+  import:
+    admin_toolbar: '*'
+    admin_toolbar_tools: '*'
+    block_content: '*'
+    dblog: '*'
+    field: '*'
+    field_ui: '*'
+    file: '*'
+    filter: '*'
+    gin: '*'
+    image: '*'
+    menu_ui: '*'
+    node: '*'
+    system: '*'
+    taxonomy: '*'
+    text: '*'
+    user: '*'
+    views: '*'
