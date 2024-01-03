@@ -53,7 +53,8 @@ config:
     field: '*'
     field_ui: '*'
     file: '*'
-    filter: '*'
+    filter:
+      - filter.settings.yml
     gin:
       - gin.settings
       - block.block.gin_breadcrumbs
@@ -66,11 +67,32 @@ config:
     media: '*'
     media_library: '*'
     menu_ui: '*'
-    node: '*'
+    node:
+      - core.entity_view_mode.node.full.yml
+      - core.entity_view_mode.node.rss.yml
+      - core.entity_view_mode.node.search_index.yml
+      - core.entity_view_mode.node.search_result.yml
+      - core.entity_view_mode.node.teaser.yml
+      - node.settings.yml
+      - views.view.archive.yml
+      - views.view.content.yml
+      - views.view.content_recent.yml
+      - views.view.frontpage.yml
+      - views.view.glossary.yml
     taxonomy: '*'
     text: '*'
-    system: '*'
-    user: '*'
+    user:
+      - core.entity_form_mode.user.register.yml
+      - core.entity_view_mode.user.compact.yml
+      - core.entity_view_mode.user.full.yml
+      - user.flood.yml
+      - user.mail.yml      - user.role.anonymous.yml
+      - user.role.authenticated.yml
+
+      - user.settings.yml
+      - views.view.user_admin_people.yml
+      - views.view.who_s_new.yml
+      - views.view.who_s_online.yml
     views: '*'
 
   actions:
