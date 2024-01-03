@@ -88,7 +88,6 @@ config:
       - user.flood.yml
       - user.mail.yml
       - user.role.authenticated.yml
-
       - user.settings.yml
       - views.view.user_admin_people.yml
       - views.view.who_s_new.yml
