@@ -86,7 +86,7 @@ config:
       - core.entity_view_mode.user.compact.yml
       - core.entity_view_mode.user.full.yml
       - user.flood.yml
-      - user.mail.yml      - user.role.anonymous.yml
+      - user.mail.yml
       - user.role.authenticated.yml
 
       - user.settings.yml
