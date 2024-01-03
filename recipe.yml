@@ -24,11 +24,12 @@ install:
   - gin_toolbar
   - image
   - link
+  - media
+  - media_library
   - menu_link_content
   - menu_ui
   - mysql
   - node
-  - olivero
   - options
   - page_cache
   - path
@@ -46,18 +47,64 @@ config:
   import:
     admin_toolbar: '*'
     admin_toolbar_tools: '*'
-    block_content: '*'
+    block_content:
+      - views.view.block_content.yml
     dblog: '*'
     field: '*'
     field_ui: '*'
     file: '*'
     filter: '*'
-    gin: '*'
+    gin:
+      - gin.settings
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
     image: '*'
+    media: '*'
+    media_library: '*'
     menu_ui: '*'
     node: '*'
-    system: '*'
     taxonomy: '*'
     text: '*'
+    system: '*'
     user: '*'
     views: '*'
+
+  actions:
+    block.block.gin_admin:
+      simple_config_update:
+        status: false
+    block.block.gin_branding:
+      simple_config_update:
+        status: false
+    block.block.gin_local_actions:
+      simple_config_update:
+        region: content
+        weight: -10
+    block.block.gin_local_tasks:
+      simple_config_update:
+        status: false
+    block.block.gin_page_title:
+      simple_config_update:
+        region: header
+        weight: -10
+    block.block.gin_primary_local_tasks:
+      simple_config_update:
+        region: header
+        weight: -5
+    block.block.gin_tools:
+      simple_config_update:
+        status: false
+    node.settings:
+      simple_config_update:
+        use_admin_theme: true
+    user.settings:
+      simple_config_update:
+        register: admin_only
+    system.theme:
+      simple_config_update:
+        admin: 'gin'
+        default: 'stark'
