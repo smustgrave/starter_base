@@ -1,0 +1,17 @@
+{
+  "name": "smustgrave/starter_base",
+  "description": "A recipe for starting a Drupal 10 project.",
+  "type": "drupal-recipe",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Stephen Mustgrave",
+      "homepage": "https://www.drupal.org/u/smustgrave",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/admin_toolbar": "^3.4",
+    "drupal/redirect": "^1.0"
+  }
+}
