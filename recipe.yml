@@ -7,19 +7,14 @@ install:
   - admin_toolbar_tools
   - big_pipe
   - block_content
-  - block
   - breakpoint
   - ckeditor5
   - config
   - contextual
   - datetime
-  - dblog
-  - dynamic_page_cache
   - editor
-  - field
   - field_ui
   - file
-  - filter
   - gin
   - gin_toolbar
   - image
@@ -28,18 +23,10 @@ install:
   - media_library
   - menu_link_content
   - menu_ui
-  - mysql
-  - node
   - options
-  - page_cache
   - path
-  - path_alias
-  - system
   - taxonomy
-  - text
   - toolbar
-  - update
-  - user
   - views_ui
   - views
 
@@ -49,16 +36,13 @@ config:
     admin_toolbar_tools: '*'
     block_content:
       - views.view.block_content.yml
-    dblog: '*'
-    field: '*'
     field_ui: '*'
     file: '*'
-    filter:
-      - filter.settings.yml
     gin:
       - gin.settings
       - block.block.gin_breadcrumbs
       - block.block.gin_content
+      - block.block.gin_local_actions
       - block.block.gin_messages
       - block.block.gin_page_title
       - block.block.gin_primary_local_tasks
@@ -67,31 +51,7 @@ config:
     media: '*'
     media_library: '*'
     menu_ui: '*'
-    node:
-      - core.entity_view_mode.node.full.yml
-      - core.entity_view_mode.node.rss.yml
-      - core.entity_view_mode.node.search_index.yml
-      - core.entity_view_mode.node.search_result.yml
-      - core.entity_view_mode.node.teaser.yml
-      - node.settings.yml
-      - views.view.archive.yml
-      - views.view.content.yml
-      - views.view.content_recent.yml
-      - views.view.frontpage.yml
-      - views.view.glossary.yml
     taxonomy: '*'
-    text: '*'
-    user:
-      - core.entity_form_mode.user.register.yml
-      - core.entity_view_mode.user.compact.yml
-      - core.entity_view_mode.user.full.yml
-      - user.flood.yml
-      - user.mail.yml
-      - user.role.authenticated.yml
-      - user.settings.yml
-      - views.view.user_admin_people.yml
-      - views.view.who_s_new.yml
-      - views.view.who_s_online.yml
     views: '*'
 
   actions:
